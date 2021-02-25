@@ -11,7 +11,7 @@ public class InitialFrame extends JFrame {
         setTitle("魔方阵生成器");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(300,100);
-        setLayout(new FlowLayout());
+        setLayout(new BorderLayout());
 
         JTextField jtf = new JTextField("",5);
         JButton jb = new JButton("生成");
@@ -29,9 +29,10 @@ public class InitialFrame extends JFrame {
             }
         });
 
-        Container con = this.getContentPane();
-        con.add(jtf);
-        con.add(jb);
+        JPanel panel = new JPanel();
+        panel.add(jtf,BorderLayout.CENTER);
+        panel.add(jb,BorderLayout.CENTER);
+        add(panel);
 
         setResizable (false);
         setLocationRelativeTo(null);//令窗体居中

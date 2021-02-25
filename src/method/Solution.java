@@ -151,6 +151,13 @@ public class Solution {
 
     private static void check(int num, int[][] square) {
 
+        int sum_all = 0;//总体和
+        for(int i=1;i<=num*num;i++){
+            sum_all = sum_all + i;
+        }
+
+        System.out.println ("每行、每列以及对角线之和应为" + sum_all/num );
+
         int[] sum_row = new int[num];//每一行的和
         int[] sum_column = new int[num];//每一列的和
         int sum_main_diag = 0, sum_counter_diag = 0;//主对角线的和，副对角线的和
@@ -163,10 +170,10 @@ public class Solution {
             sum_counter_diag = sum_counter_diag + square[i][num - i - 1];
         }
         for (int i = 0; i < num; i++) {
-            System.out.println ("第" + i + "行的和：" + sum_row[i]);
+            System.out.println ("第" + (i+1) + "行的和：" + sum_row[i]);
         }
         for (int j = 0; j < num; j++) {
-            System.out.println ("第" + j + "列的和：" + sum_column[j]);
+            System.out.println ("第" + (j+1) + "列的和：" + sum_column[j]);
         }
         System.out.println ("主对角线的和：" + sum_main_diag);
         System.out.println ("副对角线的和：" + sum_counter_diag);
