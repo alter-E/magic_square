@@ -13,6 +13,7 @@ public class InitialFrame extends JFrame {
         setSize(300,100);
         setLayout(new BorderLayout());
 
+        JLabel label = new JLabel("魔方阵的阶数：");
         JTextField jtf = new JTextField("",5);
         JButton jb = new JButton("生成");
         jb.addActionListener(new ActionListener(){
@@ -30,6 +31,7 @@ public class InitialFrame extends JFrame {
         });
 
         JPanel panel = new JPanel();
+        panel.add(label,BorderLayout.CENTER);
         panel.add(jtf,BorderLayout.CENTER);
         panel.add(jb,BorderLayout.CENTER);
         add(panel);
