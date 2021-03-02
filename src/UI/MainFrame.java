@@ -154,6 +154,8 @@ public class MainFrame extends JFrame {
                     for (int i = 0; i < num; i++)
                         for (int j = 0; j < num; j++) {
                             JLabel label = new JLabel (String.valueOf (magic[i][j]), JLabel.CENTER);
+                            label.setOpaque (true);
+                            label.setBackground (Color.WHITE);
                             label.setBorder (BorderFactory.createLineBorder (Color.BLACK));
                             label.setFont (font);
                             panel.add (label);

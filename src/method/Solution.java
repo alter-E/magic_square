@@ -156,6 +156,8 @@ public class Solution {
             sum_all = sum_all + i;
         }
 
+        System.out.println (num + "阶魔方阵：" );
+
         System.out.println ("每行、每列以及对角线之和应为" + sum_all/num );
 
         int[] sum_row = new int[num];//每一行的和
@@ -177,5 +179,6 @@ public class Solution {
         }
         System.out.println ("主对角线的和：" + sum_main_diag);
         System.out.println ("副对角线的和：" + sum_counter_diag);
+        System.out.println ( );
     }
 }
